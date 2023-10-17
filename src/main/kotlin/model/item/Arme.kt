@@ -11,7 +11,7 @@ import model.personnage.Personnage
  * @param type Le type de l'arme qui détermine ses caractéristiques (nombre de dés, valeur de dé maximum, etc.).
  * @param qualite La qualité de l'arme qui influence les dégâts infligés.
  */
-class Arme(
+class             Arme(
     nom: String,
     description: String,
     val type: TypeArme,

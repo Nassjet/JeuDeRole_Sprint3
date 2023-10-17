@@ -4,13 +4,29 @@ import model.jeu.Sort
 import model.jeu.TirageDes
 import model.item.*
 import model.personnage.Personnage
-import dao.QualiteDAO
-import generateur.GenerateurQualites
+import generateur.*
 
 //DEMO MISSION 1
 val generateurQualites = GenerateurQualites("assets/qualites.csv")
-
 val qualites = generateurQualites.generer()
+
+val generateurArme = GenerateurArme("assets/arme.csv")
+val arme = generateurArme.generer()
+
+val generateurArmure = GenerateurArmure("assets/armure.csv")
+val armure = generateurArmure.generer()
+
+val generateurBombe= GenerateurBombe("assets/Bombe.csv")
+val bombe = generateurBombe.generer()
+
+val generateurPotion= GenerateurPotion("assets/potion.csv")
+val Potion= generateurPotion.generer()
+
+val generateurTypeArme = GenerateurTypeArme("assets/typeArme.csv")
+val typeArme = generateurTypeArme.generer()
+
+val generateurTypeArmure = GenerateurTypeArmure("assets/typeArmure.csv")
+val typeArmure = generateurTypeArmure.generer()
 
 //DEMO MISSION 2 :
 // TODO Retirer les commentaires des lignes 21 et 24
@@ -74,7 +90,7 @@ val projectionAcide = Sort("Sort de projection acide", { caster, cible ->
 val typeEpeeLongue = TypeArme("Epee longue", 1, 8, 2, 20)
 
 val typeEpeeCourte = TypeArme("Epee courte", 1, 6, 2, 18)
-val typeDague = TypeArme("Epee courte", 1, 4, 3, 15)
+val typeDague = TypeArme("Couteau", 1, 4, 3, 15)
 val typeLance = TypeArme("Lance", 1, 6, 3, 18)
 val typeMarteau = TypeArme("Marteau", 1, 8, 2, 20)
 
